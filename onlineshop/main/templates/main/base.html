@@ -32,7 +32,14 @@
             </div>
         </div>
     </header>
-
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+    <img src="{% static 'img/frame1.png' %}" alt="" class="frame1">
+    <img src="{% static 'img/frame2.png' %}" alt="" class="frame2">
+    <img src="{% static 'img/frame3.png' %}" alt="" class="frame3">
+    <img src="{% static 'img/frame4.png' %}" alt="" class="frame4">
     {% comment %} js for bootstrap {% endcomment %}
     <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 </body>
