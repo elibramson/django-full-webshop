@@ -246,3 +246,33 @@ h5 {
     row-gap: 10px;
     margin: 0 auto;
 }
+
+.sidebar {
+    margin-top: 70px;
+}
+
+.llist {
+    margin-left: -80px;
+}
+
+.sidebar ul li {
+    font-size: 20px;
+    width: 165px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+.sidebar ul li a {
+    margin-left: 15px;
+    width: 165px;
+}
+
+.sidebar ul {
+    margin-top: 20px;
+}
+
+.selected {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-image: url(../img/categories-gtn.png);
+}
