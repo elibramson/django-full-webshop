@@ -19,11 +19,32 @@
                             <div class="cart-card-name">
                                 <p>{{ product.name }}</p>
                             </div>
-                            
+                            <div class="card-card-q">
+                                <p>Quantity: {{ item.quantity }}</p>
+                            </div>
+                        </div>
+                        <form action="{% url 'cart:cart_remove' product.id %}" method="post">
+                            <input type="submit" value="Remove" class="remove-btn">
+                            {% csrf_token %}
+                        </form>
+                        <div class="card-card-price">
+                            {% if product.discount %}
+                            <div class="cart-discount d-flex gap-2">
+                                <p class="line">$ {{ product.price }}</p>
+                                <p>$ {{ product.sell_price }}</p>
+                            </div>
+                        {% else %}
+                            <p class="price">$ {{ product.price }}</p>
+                        {% endif %}
                         </div>
                     </div>
                 {% endwith %}
             {% endfor %}
+        </div>
+        <div class="total">
+            <h5>Total sum: $ {{ cart.get_total_price }}</h5>
+        </div>
+        <div class="cart-buttons-d-flex gap-3">
         </div>
     </section>
 {% endblock content %}
